@@ -1,11 +1,17 @@
-# 码卡
+## 码卡：一款充满 OI 元素的卡牌游戏
 
-一个有大量 ``OI`` 元素的卡牌游戏。本项目由两个初中生开发，正在一步步实现。
+**码卡** 是一款富含 **OI**（信息学奥赛）元素的卡牌游戏，由两位中学生开发。这个项目正在积极开发中。
 
-如果你想知道我们的进展，可以下载 [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/edit/main/game.tldr) 并使用 [tldraw](tldraw.com) 打开，上面有一些类的具体成员、每个类之间的关系与我们的完成情况。
+**想了解我们的进度？**
 
-如果你想加入我们，可以发邮件给 heyicong.jeremy@gmail.com 。
+下载 [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/edit/main/game.tldr) 并使用 [tldraw](tldraw.com) 打开。这个文件详细展示了每个类的具体成员、类之间的关系以及我们目前的完成情况。
 
-本项目目前完全开源，任何人都可以在协议的要求下使用。
+**想加入我们？**
+
+欢迎你给我们发邮件：heyicong.jeremy@gmail.com。
+
+**开源项目**
+
+这个项目是完全开源的。任何人都可以在协议允许的范围内使用我们的代码。
 
 _By [heyicong](https://www.luogu.com.cn/user/725640) & [JDScript0117](https://www.luogu.com.cn/user/910593)_
