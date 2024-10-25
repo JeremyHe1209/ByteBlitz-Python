@@ -1,3 +1,5 @@
+[Chinese](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README-en.md)
+
 ## ByteBlitz: A Card Game Infused with OI Elements
 
 _Translate By [Gemini](gemini.google.com)_
