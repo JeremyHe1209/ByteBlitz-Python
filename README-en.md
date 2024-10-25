@@ -1,14 +1,14 @@
-[Chinese](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README-en.md)
+[Chinese](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README-en.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README-en.md)
 
 ## ByteBlitz: A Card Game Infused with OI Elements
 
-_Translate By [Gemini](gemini.google.com)_
+_Translate By [Gemini](https://gemini.google.com)_
 
 **ByteBlitz** is an innovative card game designed with a heavy emphasis on **OI** (Olympiad in Informatics) concepts. Developed by two middle school students, this project is continuously evolving.
 
 **Curious about our progress?**
 
-Download [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/edit/main/game.tldr) and visualize it using [tldraw](tldraw.com). This file provides a clear overview of each class, their interconnections, and our current development status.
+Download [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/blob/main/game.tldr) and visualize it using [tldraw](https://www.tldraw.com). This file provides a clear overview of each class, their interconnections, and our current development status.
 
 **Want to contribute?**
 
