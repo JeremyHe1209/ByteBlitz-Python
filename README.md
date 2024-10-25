@@ -1,3 +1,5 @@
+[Chinese](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README-en.md)
+
 ## 码卡：一款充满 OI 元素的卡牌游戏
 
 **码卡** 是一款富含 **OI**（信息学奥赛）元素的卡牌游戏，由两位中学生开发。这个项目正在积极开发中。
