@@ -1,4 +1,4 @@
-[Chinese](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/edit/main/README-en.md)
+[Chinese](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README-en.md)
 
 ## 码卡：一款充满 OI 元素的卡牌游戏
 
@@ -6,7 +6,7 @@
 
 **想了解我们的进度？**
 
-下载 [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/edit/main/game.tldr) 并使用 [tldraw](tldraw.com) 打开。这个文件详细展示了每个类的具体成员、类之间的关系以及我们目前的完成情况。
+下载 [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/edit/blob/game.tldr) 并使用 [tldraw](https://www.tldraw.com) 打开。这个文件详细展示了每个类的具体成员、类之间的关系以及我们目前的完成情况。
 
 **想加入我们？**
 
