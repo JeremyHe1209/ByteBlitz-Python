@@ -8,7 +8,7 @@ _Translate By [Gemini](https://gemini.google.com)_
 
 **Curious about our progress?**
 
-Download [game.tldr](https://github.com/JeremyHe1209/ByteBlitz/blob/main/game.tldr) and visualize it using [tldraw](https://www.tldraw.com). This file provides a clear overview of each class, their interconnections, and our current development status.
+Download [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) and visualize it using [tldraw](https://www.tldraw.com). This file provides a clear overview of each class, their interconnections, and our current development status.
 
 **Want to contribute?**
 
