@@ -6,7 +6,7 @@
 
 **想了解我们的进度？**
 
-下载 [game.tldr]([https://github.com/JeremyHe1209/ByteBlitz/blob/main/game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr)) 并使用 [tldraw](https://www.tldraw.com) 打开。这个文件详细展示了每个类的具体成员、类之间的关系以及我们目前的完成情况。
+下载 [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) 并使用 [tldraw](https://www.tldraw.com) 打开。这个文件详细展示了每个类的具体成员、类之间的关系以及我们目前的完成情况。
 
 **想加入我们？**
 
