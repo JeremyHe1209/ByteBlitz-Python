@@ -12,7 +12,7 @@ class Ability:
         self.keys = ["Search", "DP", "String", "Math", "DS", "Graph", "Geometry", "Misc"]
         self.abilities = {}
         for key in self.keys:
-            self.abilities[key] = Score()
+            self.abilities[key] = Score(key)
         return
     def updateValue(self) -> None:
         sumabilities: int = 0
