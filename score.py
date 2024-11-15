@@ -1,10 +1,10 @@
-from ahpair import *
+from buff import *
 
 class Score:
     score: int = 0
     grade: int = 0
     scoretograde: [int] = []
-    gradetobuff: [AHPair] = {}
+    gradetobuff: [Buff] = {}
     name: str = ""
     buffname: str = ""
     def __init__(self, name: str) -> None:
@@ -12,7 +12,7 @@ class Score:
         self.grade = 0
         self.scoretograde = []
         self.name = name
-        self.buffname = name + "temratebuff"
+        self.buffname = name + "attacktimetemperatebuff"
         for i in range(3):
             self.scoretograde.append(0)
         for i in range(2):
@@ -24,16 +24,14 @@ class Score:
         for i in range(5):
             self.scoretograde.append(4)
         self.gradetobuff = [
-            AHPair(0, 0, True, self.buffname),
-            AHPair(1, 0, True, self.buffname),
-            AHPair(2, 1, True, self.buffname),
-            AHPair(3, 2, True, self.buffname),
-            AHPair(4, 4, True, self.buffname),
-            AHPair(6, 6, True, self.buffname)
+            Buff(0, 0, True, self.buffname), Buff(1, 0, True, self.buffname),
+            Buff(2, 1, True, self.buffname), Buff(3, 2, True, self.buffname),
+            Buff(4, 4, True, self.buffname), Buff(6, 6, True, self.buffname)
         ]
         return
-    def getBuff(self) -> AHPair:
-        return self.gradetobuff[self.grade]
+    def getBuff(self) -> Buff:
+        buff = self.gradetobuff[self.grade]
+        return Buff(buff.attack, buff.health, buff.isTemporary, buff.name)
     def updateGrade(self) -> None:
         if self.score >= 15:
             self.grade = 5
