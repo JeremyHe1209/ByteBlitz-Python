@@ -1,15 +1,15 @@
-from ahpaircontainer import *
+from buffcontainer import *
 
 class Role:
     legalattacktimes: int = 0
-    ahstates: AHPairContainer = AHPairContainer([])
+    ahstates: BuffContainer = BuffContainer([])
     roleid: int = 0
     isdead: bool = 0
     keys: [str] = []
     figures: {str : bool} = {}
     def __init__(self, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: [str]) -> None:
         self.legalattacktimes = legalattacktimes
-        self.ahstates = AHPairContainer([AHPair(attack, health, False, "initahpair")])
+        self.ahstates = BuffContainer([Buff(attack, health, False, "initahpair")])
         self.roleid = roleid
         self.isdead = False
         self.keys = ["hero", "defensive", "firewall", "hidden", "debug"]
