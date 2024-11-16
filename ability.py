@@ -6,13 +6,11 @@ class Ability:
     value: float = 0
     abilities: {str: Score} = {}
     keys: [str] = []
-    buff: Buff = Buff(0, 0)
     def __init__(self) -> None:
         self.k = 0
         self.limit = 0
         self.keys = ["Search", "DP", "String", "Math", "DS", "Graph", "Geometry", "Misc"]
         self.abilities = {}
-        self.buff = Buff(0, 0)
         for key in self.keys:
             self.abilities[key] = Score(key)
         return
@@ -27,11 +25,6 @@ class Ability:
                 sumpowerdiff += (self.abilities[key].score - self.limit) ** 2
         self.value = self.k * sumabilities + sumpowerdiff
         return
-    def updateBuff(self) -> None:
-        self.buff = Buff(0, 0)
-        for key in self.keys:
-            self.buff += self.abilities[key].getBuff()
-        return
     def update(self, abilities: {str : int}) -> bool:
         flag: bool = False
         for key in abilities.keys():
@@ -39,6 +32,5 @@ class Ability:
                 flag = True
             else:
                 self.abilities[key].update(abilities[key])
-        updateValue()
-        updateBuff()
+        self.updateValue()
         return flag
