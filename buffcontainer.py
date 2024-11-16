@@ -16,7 +16,7 @@ class BuffContainer:
         for newbuff in newbuffs:
             self.total.attack += newbuff.attack
             self.total.health += newbuff.health
-            if newbuff.isTemporary:
+            if newbuff.istemporary:
                 self.temporarybuffs.append(newbuff)
             else:
                 self.lastingbuffs.append(newbuff)
