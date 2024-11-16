@@ -25,13 +25,12 @@ class Ability:
                 sumpowerdiff += (self.abilities[key].score - self.limit) ** 2
         self.value = self.k * sumabilities + sumpowerdiff
         return
-    def update(self, keys: [str] = [], diff: [int] = []) -> bool:
+    def update(self, abilities: {str : int}) -> bool:
         flag: bool = False
-        for ind in range(len(keys)):
-            key: int = keys[ind]
-            if key in self.keys:
-                self.abilities[key].update(diff[ind])
-            else:
+        for key in abilities.keys():
+            if key not in self.keys:
                 flag = True
+            else:
+                self.abilities[key].update(abilities[key])
         self.updateValue()
         return flag
