@@ -1,37 +1,37 @@
 class Mood:
-    isAngry: bool = False
-    isHappy: bool = False
+    isangry: bool = False
+    ishappy: bool = False
     def __init__(self) -> None:
-        self.isAngry = False
-        self.isHappy = False
+        self.isangry = False
+        self.ishappy = False
         return
     def getIfItIs(self, key: str) -> None:
         if key == "":
             return True
         if key == "angry":
-            return self.isAngry
+            return self.isangry
         if key == "happy":
-            return self.isHappy
+            return self.ishappy
         if key == "not angry":
-            return not self.isAngry
+            return not self.isangry
         if key == "not happy":
-            return not self.isHappy
+            return not self.ishappy
         if key == "angry + happy":
-            return self.isAngry and self.isHappy
+            return self.isangry and self.ishappy
         if key == "angry + not happy":
-            return self.isAngry and (not self.isHappy)
+            return self.isangry and (not self.ishappy)
         if key == "not angry + happy":
-            return (not self.isAngry) and self.isHappy
+            return (not self.isangry) and self.ishappy
         if key == "not angry + not happy":
-            return (not self.isAngry) and (not self.isHappy)
+            return (not self.isangry) and (not self.ishappy)
         return False
     def getMoodString(self) -> str:
         if (self.getIfItIs("angry + happy")):
-            return "Bing so angry that be smiling"
+            return "Being so angry that be smiling"
         if (self.getIfItIs("angry + not happy")):
-            return "Bing angry very much"
+            return "Being angry very much"
         if (self.getIfItIs("not angry + happy")):
-            return "Bing happy a lot"
+            return "Being happy a lot"
         if (self.getIfItIs("not angry + not happy")):
-            return "Bing normal"
+            return "Being normal"
         return ""
