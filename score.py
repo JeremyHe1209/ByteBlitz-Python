@@ -12,7 +12,7 @@ class Score:
         self.grade = 0
         self.scoretograde = []
         self.name = name
-        self.buffname = name + "attacktimetemperatebuff"
+        self.buffname = name + "attacktimetemporarybuff"
         for i in range(3):
             self.scoretograde.append(0)
         for i in range(2):
