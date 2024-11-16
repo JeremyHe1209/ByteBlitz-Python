@@ -1,9 +1,11 @@
 class Buff:
-    health: int
-    attack: int
-    def __init__(self, health: int, attack: int) -> None:
-        self.health = health
+    attack: int = 0
+    health: int = 0
+    istemporary: bool = False
+    name: str = ""
+    def __init__(self, attack: int, health: int, istemporary: bool, name: str) -> None:
         self.attack = attack
+        self.health = health
+        self.istemporary = istemporary
+        self.name = name
         return
-    def __add__(self, other):
-        return Buff(self.health + other.health, self.attack + other.attack)
