@@ -16,19 +16,20 @@ class BuffContainer:
         for newbuff in newbuffs:
             self.total.attack += newbuff.attack
             self.total.health += newbuff.health
-            if newbuff.istemporary:
+            if newbuff.isTemporary:
                 self.temporarybuffs.append(newbuff)
             else:
                 self.lastingbuffs.append(newbuff)
         return
     def remove(self, names: [str]) -> None:
+        removeindexes: [int] = []
         for ind in range(len(self.temporarybuffs)):
             if self.temporarybuffs[ind].name in names:
                 temporarybuff: Buff = Buff(0, 0, True, "")
                 temporarybuff.attack = self.temporarybuffs[ind].attack
                 temporarybuff.health = self.temporarybuffs[ind].health
                 temporarybuff.name = self.temporarybuffs[ind].name
-                self.temporarybuffs.pop(ind)
+                removeindexes.append(ind)
                 if self.decreaselazy.attack + temporarybuff.attack < 0:
                     self.decreaselazy.attack += temporarybuff.attack
                     temporarybuff.attack = 0
@@ -43,6 +44,8 @@ class BuffContainer:
                     self.decreaselazy.health = 0
                 self.total.attack -= temporarybuff.attack
                 self.total.health -= temporarybuff.health
+        for ind in range(len(removeindexes)):
+            self.temporarybuffs.pop(removeindexes[ind] - ind)
         return
     def update(self, attackdiff: int, healthdiff: int) -> None:
         if attackdiff + self.total.attack < 0:
@@ -57,5 +60,5 @@ class BuffContainer:
             self.total.health += healthdiff
             self.decreaselazy.health += healthdiff
             healthdiff = 0
-        self.insert([Buff(attackdiff, healthdiff, False, "intemperatebuff")])
+        self.insert([Buff(attackdiff, healthdiff, False, "lastingbuff")])
         return
