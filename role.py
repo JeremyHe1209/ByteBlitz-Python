@@ -1,13 +1,15 @@
 from buffcontainer import *
 
 class Role:
+    name: str = ""
     legalattacktimes: int = 0
     ahstates: BuffContainer = BuffContainer([])
     roleid: int = 0
     isdead: bool = 0
     keys: [str] = []
     figures: {str : bool} = {}
-    def __init__(self, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: [str]) -> None:
+    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: [str]) -> None:
+        self.name = name
         self.legalattacktimes = legalattacktimes
         self.ahstates = BuffContainer([Buff(attack, health, False, "initahpair")])
         self.roleid = roleid
