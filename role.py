@@ -41,3 +41,9 @@ class Role:
             else:
                 flag = True
         return flag
+    def canBeAttacked(self, round: int) -> bool:
+        # To-do
+        return True
+    def mustBeAttacked(self, round: int) -> bool:
+        # To-do
+        return True
