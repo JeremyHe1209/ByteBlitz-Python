@@ -33,3 +33,11 @@ class Role:
             else:
                 flag = True
         return flag
+    def deleteFigures(self, deletefigures: [str]) -> bool:
+        flag: bool = False
+        for deletefigure in deletefigures:
+            if deletefigure in self.figures:
+                self.figures[deletefigure] = False
+            else:
+                flag = True
+        return flag
