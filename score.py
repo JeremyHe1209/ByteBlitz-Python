@@ -1,10 +1,11 @@
+from classes import *
 from buff import *
 
 class Score:
     score: int = 0
     grade: int = 0
-    scoretograde: [int] = []
-    gradetobuff: [Buff] = {}
+    scoretograde: list[int] = []
+    gradetobuff: list[Buff] = {}
     name: str = ""
     buffname: str = ""
     def __init__(self, name: str) -> None:

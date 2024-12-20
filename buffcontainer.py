@@ -1,18 +1,19 @@
+from classes import *
 from buff import *
 
 class BuffContainer:
     total: Buff = Buff(0, 0, False, "total")
     decreaselazy: Buff = Buff(0, 0, False, "decreaselazy")
-    temporarybuffs: [Buff] = []
-    lastingbuffs: [Buff] = []
-    def __init__(self, buffs: [Buff]) -> None:
+    temporarybuffs: list[Buff] = []
+    lastingbuffs: list[Buff] = []
+    def __init__(self, buffs: list[Buff]) -> None:
         self.total = Buff(0, 0, False, "total")
         self.decreaselazy = Buff(0, 0, False, "decreaselazy")
         self.temporarybuffs = []
         self.lastingbuffs = []
         self.insert(buffs)
         return
-    def insert(self, newbuffs: [Buff]) -> None:
+    def insert(self, newbuffs: list[Buff]) -> None:
         for newbuff in newbuffs:
             self.total.attack += newbuff.attack
             self.total.health += newbuff.health
@@ -21,8 +22,8 @@ class BuffContainer:
             else:
                 self.lastingbuffs.append(newbuff)
         return
-    def remove(self, names: [str]) -> None:
-        removeindexes: [int] = []
+    def remove(self, names: list[str]) -> None:
+        removeindexes: list[int] = []
         for ind in range(len(self.temporarybuffs)):
             if self.temporarybuffs[ind].name in names:
                 temporarybuff: Buff = Buff(0, 0, True, "")

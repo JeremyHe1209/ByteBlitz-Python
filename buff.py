@@ -1,3 +1,5 @@
+from classes import *
+
 class Buff:
     attack: int = 0
     health: int = 0

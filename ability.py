@@ -1,11 +1,12 @@
+from classes import *
 from score import *
 
 class Ability:
     k: float = 0
     limit: float = 0
     value: float = 0
-    abilities: {str: Score} = {}
-    keys: [str] = []
+    abilities: dict[str, bool] = {}
+    keys: list[str] = []
     def __init__(self) -> None:
         self.k = 0
         self.limit = 0
@@ -25,7 +26,7 @@ class Ability:
                 sumpowerdiff += (self.abilities[key].score - self.limit) ** 2
         self.value = self.k * sumabilities + sumpowerdiff
         return
-    def update(self, abilities: {str : int}) -> bool:
+    def update(self, abilities: dict[str, int]) -> bool:
         flag: bool = False
         for key in abilities.keys():
             if key not in self.keys:

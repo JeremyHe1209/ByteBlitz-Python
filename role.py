@@ -1,3 +1,4 @@
+from classes import *
 from buffcontainer import *
 
 class Role:
@@ -6,9 +7,9 @@ class Role:
     ahstates: BuffContainer = BuffContainer([])
     roleid: int = 0
     isdead: bool = 0
-    keys: [str] = []
-    figures: {str : bool} = {}
-    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: [str]) -> None:
+    keys: list[str] = []
+    figures: dict[str, bool] = {}
+    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: list[str]) -> None:
         self.name = name
         self.legalattacktimes = legalattacktimes
         self.ahstates = BuffContainer([Buff(attack, health, False, "initahpair")])
@@ -25,7 +26,7 @@ class Role:
         if self.ahstates.total.health == 0:
             self.isdead = True
         return
-    def giveFigures(self, newfigures: [str]) -> bool:
+    def giveFigures(self, newfigures: list[str]) -> bool:
         flag: bool = False
         for newfigure in newfigures:
             if newfigure in self.figures:
@@ -33,7 +34,7 @@ class Role:
             else:
                 flag = True
         return flag
-    def deleteFigures(self, deletefigures: [str]) -> bool:
+    def deleteFigures(self, deletefigures: list[str]) -> bool:
         flag: bool = False
         for deletefigure in deletefigures:
             if deletefigure in self.figures:
