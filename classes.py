@@ -12,7 +12,9 @@ class Ability:
     pass
 class Mood:
     pass
-class Skill:
+class EffectContainer:
+    pass
+class Skill(EffectContainer):
     pass
 class Card:
     pass

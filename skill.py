@@ -1,4 +1,5 @@
 from classes import *
+from effectcontainer import *
 
-class Skill:
+class Skill(EffectContainer):
     pass
