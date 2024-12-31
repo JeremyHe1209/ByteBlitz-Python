@@ -7,14 +7,13 @@ class Ability:
     k: float = 0
     limit: float = 0
     value: float = 0
-    abilities: dict[str, Buff] = {}
+    abilities: dict[str, Score] = {}
     keys: list[str] = []
     buffcontainer : BuffContainer
     def __init__(self) -> None:
         self.k = 0
         self.limit = 0
         self.keys = ["Search", "DP", "String", "Math", "DS", "Graph", "Geometry", "Misc"]
-        self.abilities = {}
         self.buffcontainer = BuffContainer([])
         for key in self.keys:
             self.abilities[key] = Score(key)
