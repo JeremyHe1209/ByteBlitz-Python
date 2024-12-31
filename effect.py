@@ -9,13 +9,15 @@ class Effect:
         return
     def canHappen(self, battle : Battle) -> bool:
         return True
+    def Happens(self, battle : Battle) -> None:
+        return
     pass
 
 class HeroEffect(Effect):
     name : str
     isred : bool
     def __init__(self, name : str, isred : bool) -> None:
-        super(HeroEffect, self).__init__(name)
+        Effect.__init__(self, name)
         self.isred = isred
         return
     def canHappen(self, battle : Battle) -> bool:
@@ -29,7 +31,7 @@ class MinionsEffect(Effect):
     isred : bool
     number : int
     def __init__(self, name : str, isred : bool, number : int) -> None:
-        super(MinionsEffect, self).__init__(name)
+        Effect.__init__(self, name)
         self.isred = isred
         self.number = number
         return
@@ -40,4 +42,4 @@ class MinionsEffect(Effect):
 class BattleEffect(Effect):
     name : str
     def __init__(self, name : str) -> None:
-        self.name = name
+        Effect.__init__(self, name)

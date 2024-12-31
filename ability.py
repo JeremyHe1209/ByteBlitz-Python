@@ -1,19 +1,24 @@
 from classes import *
 from score import *
+from buff import *
+from buffcontainer import *
 
 class Ability:
     k: float = 0
     limit: float = 0
     value: float = 0
-    abilities: dict[str, bool] = {}
+    abilities: dict[str, Buff] = {}
     keys: list[str] = []
+    buffcontainer : BuffContainer
     def __init__(self) -> None:
         self.k = 0
         self.limit = 0
         self.keys = ["Search", "DP", "String", "Math", "DS", "Graph", "Geometry", "Misc"]
         self.abilities = {}
+        self.buffcontainer = BuffContainer([])
         for key in self.keys:
             self.abilities[key] = Score(key)
+            self.buffcontainer.insert([self.abilities[key].getBuff()])
         return
     def updateValue(self) -> None:
         sumabilities: int = 0
@@ -32,6 +37,12 @@ class Ability:
             if key not in self.keys:
                 flag = True
             else:
+                self.buffcontainer.remove([self.abilities[key].name])
                 self.abilities[key].update(abilities[key])
+                self.buffcontainer.insert([self.abilities[key].getBuff()])
         self.updateValue()
         return flag
+    def getBuff(self) -> Buff:
+        tmp : Buff = self.buffcontainer.total
+        tmp.name = "abilitybuff"
+        return tmp

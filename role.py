@@ -9,7 +9,7 @@ class Role:
     isdead: bool = 0
     keys: list[str] = []
     figures: dict[str, bool] = {}
-    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: list[str] = []) -> None:
+    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: list[str]) -> None:
         self.name = name
         self.legalattacktimes = legalattacktimes
         self.ahstates = BuffContainer([Buff(attack, health, False, "initahpair")])
