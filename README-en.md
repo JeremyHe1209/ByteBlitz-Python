@@ -28,7 +28,7 @@ Since this game is a card game, it requires a large number of characters and car
 
 ``Hero`` class (completed, can be contributed)
 
-**How ​​to contribute**
+**How ​​to contribute?**
 
 For the ``CardPair`` class, contributions are not open yet.
 
