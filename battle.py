@@ -1,4 +1,3 @@
-from classes import *
 from team import *
 
 class Battle:

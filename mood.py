@@ -1,5 +1,3 @@
-from classes import *
-
 class Mood:
     isangry: bool = False
     ishappy: bool = False

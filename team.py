@@ -1,4 +1,3 @@
-from classes import *
 from hero import *
 
 class Team:

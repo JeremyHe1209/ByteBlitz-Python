@@ -1,4 +1,3 @@
-from classes import *
 from buffcontainer import *
 
 class Role:
@@ -42,9 +41,9 @@ class Role:
             else:
                 flag = True
         return flag
-    def canBeSelected(self, round: int) -> bool:
+    def canBeSelected(self) -> bool:
         # To-do
         return True
-    def mustBeSelected(self, round: int) -> bool:
+    def mustBeSelected(self) -> bool:
         # To-do
         return True

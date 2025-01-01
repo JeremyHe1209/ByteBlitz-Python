@@ -1,4 +1,3 @@
-from classes import *
 from effect import *
 
 class EffectContainer:
@@ -7,14 +6,36 @@ class EffectContainer:
     def __init__(self, name: str, effects: list[Effect]) -> None:
         self.name = name
         self.effects = effects
-    def canHappen(self, battle : Battle) -> bool:
+    def canHappen(self, redhero : Role, bluehero : Role, redminions : list[Role], blueminions : list[Role], reddeck : list[object], bluedeck : list[object]) -> bool:
         flag : bool = True
         for effect in self.effects:
-            flag = flag and effect.canHappen(battle)
+            if isinstance(effect, HeroEffect):
+                if effect.isred:
+                    flag = flag and effect.canHappen(redhero)
+                else:
+                    flag = flag and effect.canHappen(bluehero)
+            elif isinstance(effect, MinionsEffect):
+                if effect.isred:
+                    flag = flag and effect.canHappen(redminions)
+                else:
+                    flag = flag and effect.canHappen(blueminions)
+            elif isinstance(effect, DeckEffect):
+                effect.canHappen(reddeck, bluedeck)
             if not flag:
                 break
         return flag
-    def happen(self) -> None:
+    def happens(self, redhero : Role, bluehero : Role, redminions : list[Role], blueminions : list[Role], reddeck : list[object], bluedeck : list[object]) -> None:
         for effect in self.effects:
-            effect.happen(battle)
-            return
+            if isinstance(effect, HeroEffect):
+                if effect.isred:
+                    effect.happens(redhero)
+                else:
+                    effect.happens(bluehero)
+            elif isinstance(effect, MinionsEffect):
+                if effect.isred:
+                    effect.happens(redminions)
+                else:
+                    effect.happens(blueminions)
+            elif isinstance(effect, DeckEffect):
+                effect.happens(reddeck, bluedeck)
+        return

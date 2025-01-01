@@ -1,5 +1,4 @@
 # MinionContainer 初代代码，仅用于测试effect。待后期完善.
-from classes import *
 from minion import *
 
 class MinionContainer:

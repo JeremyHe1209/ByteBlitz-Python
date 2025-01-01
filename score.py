@@ -1,13 +1,12 @@
-from classes import *
 from buff import *
 
 class Score:
-    score: int = 0
-    grade: int = 0
-    scoretograde: list[int] = []
-    gradetobuff: list[Buff] = {}
-    name: str = ""
-    buffname: str = ""
+    score: int
+    grade: int
+    scoretograde: list[int]
+    gradetobuff: list[Buff]
+    name: str
+    buffname: str
     def __init__(self, name: str) -> None:
         self.score = 0
         self.grade = 0
@@ -32,7 +31,7 @@ class Score:
         return
     def getBuff(self) -> Buff:
         buff = self.gradetobuff[self.grade]
-        return Buff(buff.attack, buff.health, buff.isTemporary, buff.name)
+        return Buff(buff.attack, buff.health, buff.istemporary, buff.name)
     def updateGrade(self) -> None:
         if self.score >= 15:
             self.grade = 5

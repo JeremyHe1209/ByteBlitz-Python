@@ -1,4 +1,3 @@
-from classes import *
 from role import *
 from mood import *
 from ability import *
@@ -24,10 +23,10 @@ class Hero(Role):
         self.mood = mood
         self.ability = ability
         self.skill = skill
-        self.buffcontainer.insert(self.ability.getBuff())
+        self.ahstates.insert([self.ability.getBuff()])
         return
     def updateAbility(self, abilities: dict[str, int]) -> None:
-        self.buffcontainer.remove("abilitybuff")
+        self.ahstates.remove(["abilitybuff"])
         self.ability.update(abilities)
-        self.buffcontainer.insert(self.ability.getBuff())
+        self.ahstates.insert([self.ability.getBuff()])
         return

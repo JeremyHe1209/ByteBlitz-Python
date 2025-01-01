@@ -1,4 +1,3 @@
-from classes import *
 from score import *
 from buff import *
 from buffcontainer import *
