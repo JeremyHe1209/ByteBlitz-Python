@@ -8,7 +8,7 @@ _Translate By [Google](https://translate.google.com)_
 
 **Want to know our progress?**
 
-Download [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) and open it with [tldraw](https://www.tldraw.com). This file shows in detail the specific members of each class, the relationship between classes, and our current completion status. (This file is updated slowly, and the introduction of the newly completed class may not be accurate.)
+Download [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) and open it with [tldraw](https://www.tldraw.com). This file shows in detail the specific members of each class, the relationship between classes, and our current completion status. (This file is updated slowly, and the introduction of the newly completed class may **not be accurate**.)
 
 **Want to join us officially?**
 
