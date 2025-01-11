@@ -8,7 +8,7 @@ class TestHeroEffect2(MinionsEffect):
 class TestHeroEffect3(DeckEffect):
     pass
 
-class TestHeroSkill(Skill):
+class TestHeroSkill3(Skill):
     def __init__(self) -> None:
-        Skill.__init__(self, "TestHeroSkill", [TestHeroEffect1("TestHeroEffect1", True), TestHeroEffect2("TestHeroEffect2", True, 1), TestHeroEffect3("TestHeroEffect3")])
+        Skill.__init__(self, "TestHeroSkill3", [TestHeroEffect1("TestHeroEffect1", True), TestHeroEffect2("TestHeroEffect2", True, 1), TestHeroEffect3("TestHeroEffect3")])
         return

@@ -1,55 +1,61 @@
 [Chinese](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README-en.md)
 
-## ByteBlitz: A card game full of OI elements
+## ByteBlitz: A Card Game with OI Elements
 
-_Translate By [Google](https://translate.google.com)_
+*Translate By [ChatGPT](https://chatgpt.com/)*
 
-**ByteBlitz** is a card game full of **OI** (Olympiad in Informatics) elements, developed by two middle school students. This project is under active development.
+**ByteBlitz** is a card game rich in **OI** (Olympiad in Informatics) elements, developed by two middle school students. This project is currently under active development.
 
-**Want to know our progress?**
+**Want to track our progress?**
 
-Download [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) and open it with [tldraw](https://www.tldraw.com). This file shows in detail the specific members of each class, the relationship between classes, and our current completion status. (This file is updated slowly, and the introduction of the newly completed class may **not be accurate**.)
+Download [game.tldr](https://raw.githubusercontent.com/JeremyHe1209/ByteBlitz/main/game.tldr) and open it using [tldraw](https://www.tldraw.com). This file provides detailed information about each class, their relationships, and our current progress. (Note: This file is updated infrequently, so descriptions of newly completed classes may **not be accurate**.)
 
-**Want to join us officially?**
+**Want to officially join us?**
 
-You are welcome to send us an email: ``heyicong.jeremy@gmail.com`` or raise an ``issue``.
+Feel free to send us an email at: `heyicong.jeremy@gmail.com` or open an `issue`.
 
 **Open Source Project**
 
-This project is completely open source. Anyone can use our code within the scope permitted by the agreement.
+This project is completely open source. Anyone can use our code within the limits of the license.
 
-### Contribute to this project
+### Contribute to this Project
 
-Since this game is a card game, it requires a large number of characters and cards. It is obviously impossible for the two of us to do it alone, so we need your help! Your contributions will be recorded!
+Since this is a card game, it requires a large number of characters and cards. It’s impossible for just the two of us to handle everything, so we need your help! Every small contribution you make will be recognized!
 
-**Contributions**
+**Areas for Contribution**
 
-``CardPair`` class (including ``Card`` class and ``Minion`` class) (not yet completed)
+The following classes need contributions:
 
-``Hero`` class (completed, can be contributed)
+- `CardPair` class (includes the `Card` and `Minion` classes) (not yet available for contribution)
+- `Hero` class (completed and open for contributions)
 
-**How ​​to contribute?**
+**How to Contribute?**
 
-For the ``CardPair`` class, contributions are not open yet.
+For the `CardPair` class, contributions are currently not open.
 
-For the ``Hero`` class, see the file format in ``ByteBlitz/heroes/testhero``. Assuming the hero's English name is ``{name}``, you need to **strictly** follow the following naming rules:
+For the `Hero` class, refer to the file structure in `ByteBlitz/heroes/testhero`. Assuming the hero's English name is `{name}`, you need to **strictly** follow the naming conventions below:
 
 ```
 ByteBlitz
     └── heroes
         └── {name}
             ├── {name}hero.py
-            └── {name}heroskill.py
+            ├── {name}heroskill1.py
+            ├── {name}heroskill2.py
+            ├── ...
+            └── {name}heroskills.py
 ```
 
-Among them, ``{name}heroskill.py`` is the definition of the hero skill class (``Skill``) including all effects (``Effect``), and ``{name}hero.py`` is the definition of the hero class.
+Here, files like `{name}heroskill1.py` define the hero's skills (`Skill`) and all effects (`Effect`), `{name}heroskills.py` serves as a container for all skills, and `{name}hero.py` defines the hero class.
 
-After completing these two files, please **directly** publish the code in ``issue`` (note the file name and file location). After review, we will add your code to the repository and record you in the contribution list. If you encounter other file errors during the writing process, please raise ``issue`` and we will handle it as soon as possible.
+Once these files are completed, **directly** submit your code in an `issue` (include the file names and locations). After review, we will add your code to the repository and credit you on the contributor list. If you encounter errors related to other files during development, please raise an `issue`, and we will address it as soon as possible.
 
-Thank you for your contribution!
+Thank you for your contributions!
 
-### Contribution list
+### Contributors
 
 None yet.
 
---- _By [heyicong](https://www.luogu.com.cn/user/725640) & [JDScript0117](https://www.luogu.com.cn/user/910593)_
+---
+
+_By [heyicong](https://www.luogu.com.cn/user/725640) & [JDScript0117](https://www.luogu.com.cn/user/910593)_

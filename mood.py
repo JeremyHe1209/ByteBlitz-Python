@@ -1,3 +1,5 @@
+# 待重写
+
 class Mood:
     isangry: bool = False
     ishappy: bool = False

@@ -1,4 +1,7 @@
 from buffcontainer import *
+from figurecontainer import *
+from mood import *
+from ability import *
 
 class Role:
     name: str = ""
@@ -6,44 +9,30 @@ class Role:
     ahstates: BuffContainer = BuffContainer([])
     roleid: int = 0
     isdead: bool = 0
-    keys: list[str] = []
-    figures: dict[str, bool] = {}
-    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, newfigures: list[str]) -> None:
+    figures: FigureContainer = FigureContainer()
+    mood : Mood
+    ability : Ability
+    def __init__(self, name: str, legalattacktimes: int, attack: int, health: int, roleid: int, figures: FigureContainer, mood : Mood, ability : Ability) -> None:
         self.name = name
         self.legalattacktimes = legalattacktimes
         self.ahstates = BuffContainer([Buff(attack, health, False, "initahpair")])
         self.roleid = roleid
         self.isdead = False
-        self.keys = ["hero", "defensive", "firewall", "hidden", "debug"]
-        self.figures = {}
-        for key in self.keys:
-            self.figures[key] = False
-        self.giveFigures(newfigures)
+        self.figures = figures
+        self.mood = mood
+        self.ability = ability
+        return
+    def die(self) -> None:
+        self.isdead = True
+        # To do
         return
     def update(self, attackdiff: int, healthdiff: int) -> None:
         self.ahstates.update(attackdiff, healthdiff)
         if self.ahstates.total.health == 0:
-            self.isdead = True
+            self.die()
         return
-    def giveFigures(self, newfigures: list[str]) -> bool:
-        flag: bool = False
-        for newfigure in newfigures:
-            if newfigure in self.figures:
-                self.figures[newfigure] = True
-            else:
-                flag = True
-        return flag
-    def deleteFigures(self, deletefigures: list[str]) -> bool:
-        flag: bool = False
-        for deletefigure in deletefigures:
-            if deletefigure in self.figures:
-                self.figures[deletefigure] = False
-            else:
-                flag = True
-        return flag
-    def canBeSelected(self) -> bool:
-        # To-do
-        return True
-    def mustBeSelected(self) -> bool:
-        # To-do
-        return True
+    def updateAbility(self, abilities: dict[str, int]) -> None:
+        self.ahstates.remove(["abilitybuff"])
+        self.ability.update(abilities)
+        self.ahstates.insert([self.ability.getBuff()])
+        return

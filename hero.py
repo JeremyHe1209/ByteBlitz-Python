@@ -1,12 +1,11 @@
 from role import *
+from figurecontainer import *
 from mood import *
 from ability import *
-from skill import *
+from skillcontainer import *
 
 class Hero(Role):
-    mood : Mood
-    ability : Ability
-    skill : Skill
+    skills : SkillContainer
     def __init__(
         self,
         name: str,
@@ -14,19 +13,12 @@ class Hero(Role):
         attack: int,
         health: int,
         roleid: int,
-        newfigures: list[str],
+        figures: FigureContainer,
         mood : Mood,
         ability : Ability,
-        skill : Skill
+        skills : SkillContainer
     ) -> None:
-        Role.__init__(self, name, legalattacktimes, attack, health, roleid, newfigures)
-        self.mood = mood
-        self.ability = ability
-        self.skill = skill
-        self.ahstates.insert([self.ability.getBuff()])
-        return
-    def updateAbility(self, abilities: dict[str, int]) -> None:
-        self.ahstates.remove(["abilitybuff"])
-        self.ability.update(abilities)
+        Role.__init__(self, name, legalattacktimes, attack, health, roleid, figures, mood, ability)
+        self.skills = skills
         self.ahstates.insert([self.ability.getBuff()])
         return

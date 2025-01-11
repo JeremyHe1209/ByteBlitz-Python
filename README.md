@@ -37,12 +37,15 @@ ByteBlitz
     └── heroes
         └── {name}
             ├── {name}hero.py
-            └── {name}heroskill.py
+            ├── {name}heroskill1.py
+            ├── {name}heroskill2.py
+            ├── ...
+            └── {name}heroskills.py
 ```
 
-其中， ``{name}heroskill.py`` 是对英雄技能类（``Skill``）包括所有效果（``Effect``）的定义， ``{name}hero.py`` 是对英雄类的定义。
+其中，形如 ``{name}heroskill1.py`` 的文件是对英雄技能（``Skill``）包括所有效果（``Effect``）的定义，``{name}heroskills.py`` 是所有技能的容器， ``{name}hero.py`` 是对英雄类的定义。
 
-请在完成这两个文件后，**直接**在 ``issue`` 中发布代码（备注文件名以及文件位置）。我们审核后会将你的代码加入仓库并将你记录在贡献榜中。如果在编写途中遇到其他文件报错，请提 ``issue`` ，我们会尽快处理。
+请在完成这些文件后，**直接**在 ``issue`` 中发布代码（备注文件名以及文件位置）。我们审核后会将你的代码加入仓库并将你记录在贡献榜中。如果在编写途中遇到其他文件报错，请提 ``issue`` ，我们会尽快处理。
 
 感谢您的贡献！
 
