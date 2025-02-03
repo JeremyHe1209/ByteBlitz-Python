@@ -24,30 +24,9 @@
 
 ``CardPair`` 类（包含了 ``Card`` 类与 ``Minion`` 类）（暂未完成）
 
-``Hero`` 类（已完成，可贡献）
+``Hero`` 类（暂未完成）
 
-**如何贡献？**
 
-对于 ``CardPair`` 类，暂未开放贡献。
-
-对于 ``Hero`` 类，请参见 ``ByteBlitz/heroes/testhero`` 中的文件格式。假设英雄英文名为 ``{name}`` ，那么你需要**严格**按照以下规则命名：
-
-```
-ByteBlitz
-    └── heroes
-        └── {name}
-            ├── {name}hero.py
-            ├── {name}heroskill1.py
-            ├── {name}heroskill2.py
-            ├── ...
-            └── {name}heroskills.py
-```
-
-其中，形如 ``{name}heroskill1.py`` 的文件是对英雄技能（``Skill``）包括所有效果（``Effect``）的定义，``{name}heroskills.py`` 是所有技能的容器， ``{name}hero.py`` 是对英雄类的定义。
-
-请在完成这些文件后，**直接**在 ``issue`` 中发布代码（备注文件名以及文件位置）。我们审核后会将你的代码加入仓库并将你记录在贡献榜中。如果在编写途中遇到其他文件报错，请提 ``issue`` ，我们会尽快处理。
-
-感谢您的贡献！
 
 ### 贡献榜
 

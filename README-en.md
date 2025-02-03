@@ -27,30 +27,7 @@ Since this is a card game, it requires a large number of characters and cards. I
 The following classes need contributions:
 
 - `CardPair` class (includes the `Card` and `Minion` classes) (not yet available for contribution)
-- `Hero` class (completed and open for contributions)
-
-**How to Contribute?**
-
-For the `CardPair` class, contributions are currently not open.
-
-For the `Hero` class, refer to the file structure in `ByteBlitz/heroes/testhero`. Assuming the hero's English name is `{name}`, you need to **strictly** follow the naming conventions below:
-
-```
-ByteBlitz
-    └── heroes
-        └── {name}
-            ├── {name}hero.py
-            ├── {name}heroskill1.py
-            ├── {name}heroskill2.py
-            ├── ...
-            └── {name}heroskills.py
-```
-
-Here, files like `{name}heroskill1.py` define the hero's skills (`Skill`) and all effects (`Effect`), `{name}heroskills.py` serves as a container for all skills, and `{name}hero.py` defines the hero class.
-
-Once these files are completed, **directly** submit your code in an `issue` (include the file names and locations). After review, we will add your code to the repository and credit you on the contributor list. If you encounter errors related to other files during development, please raise an `issue`, and we will address it as soon as possible.
-
-Thank you for your contributions!
+- `Hero` class (not yet available for contribution)
 
 ### Contributors
 
