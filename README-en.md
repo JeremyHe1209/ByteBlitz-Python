@@ -1,3 +1,5 @@
+**This repository has been deprecated and is currently being refactored in C#. New repository address: [ByteBlitz](https://github.com/JeremyHe1209/ByteBlitz).**
+
 [Chinese](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README.md) | [English](https://github.com/JeremyHe1209/ByteBlitz/blob/main/README-en.md)
 
 ## ByteBlitz: A Card Game with OI Elements
